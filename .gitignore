@@ -1,0 +1,11 @@
+# Excluir archivos de datos fuente
+datos/
+*.pbf
+*.zip
+*.gpkg
+*.sql.gz
+*.csv
+
+# Excluir archivos temporales
+__pycache__/
+.DS_Store

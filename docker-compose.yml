@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgis:
+    image: postgis/postgis:15-3.3
+    container_name: postgis_tarea1
+    environment:
+      POSTGRES_DB: santiago_centro
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - .:/workspace
+    working_dir: /workspace
+
+volumes:
+  postgis_data:
